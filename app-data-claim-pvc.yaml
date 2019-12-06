@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-data-claimpvc
+spec:
+  resources:
+    requests: 
+      storage: 1Gi
+  accessModes:
+  - ReadWriteOnce
+  selector:
+    matchLabels:   
+      volume: app-data   
+
